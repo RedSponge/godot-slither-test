@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjkkxg6nocygr"]
+
+[ext_resource type="PackedScene" uid="uid://cttkry1lvtmsn" path="res://Scenes/snake_chunk.tscn" id="1_va40v"]
+[ext_resource type="Script" path="res://Scripts/FollowPoint.gd" id="2_ap6fm"]
+[ext_resource type="Script" path="res://Scripts/SnakeManager.gd" id="3_iql7a"]
+
+[node name="Main" type="Node2D"]
+
+[node name="SnakeChunk" parent="." instance=ExtResource("1_va40v")]
+modulate = Color(1, 0.45098, 1, 1)
+position = Vector2(29, 65)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk2" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(29, 47)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk3" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(29, 29)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeManager" type="Node" parent="." node_paths=PackedStringArray("snake_pieces")]
+script = ExtResource("3_iql7a")
+snake_pieces = [NodePath("../SnakeChunk"), NodePath("../SnakeChunk2"), NodePath("../SnakeChunk3"), NodePath("../SnakeChunk4"), NodePath("../SnakeChunk5"), NodePath("../SnakeChunk6"), NodePath("../SnakeChunk7"), NodePath("../SnakeChunk8"), NodePath("../SnakeChunk9"), NodePath("../SnakeChunk10"), NodePath("../SnakeChunk11"), NodePath("../SnakeChunk12"), NodePath("../SnakeChunk13")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="SnakeChunk4" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(58, 58)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk5" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(87, 87)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk6" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(116, 116)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk7" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(145, 145)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk8" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(174, 174)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk9" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(203, 203)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk10" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(232, 232)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk11" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(261, 261)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk12" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(290, 290)
+script = ExtResource("2_ap6fm")
+
+[node name="SnakeChunk13" parent="." instance=ExtResource("1_va40v")]
+position = Vector2(319, 319)
+script = ExtResource("2_ap6fm")
